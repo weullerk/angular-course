@@ -1,0 +1,10 @@
+<button class="btn btn-primary" type="button" 
+(click)="onToggleInfo()">Display Details</button>
+
+<p *ngIf="showInfo">
+  Information about the page
+</p>
+
+<p *ngFor="let log of logs; let i = index" 
+[ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'white'}" 
+[ngClass]="{whiteColor: i > 3}">{{ i + 1 }} {{ log }}</p>
